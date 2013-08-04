@@ -1,0 +1,80 @@
+﻿<html>
+    <head>
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+        
+        <title> Title</title>
+        
+        <!-- PHONEGAP -->
+        <!--<script type="text/javascript" src="cordova.js"></script>-->
+        <!--<script type="text/javascript" src="app/cordova.init.js"></script>-->
+        
+        <!-- DEBUG --><!--
+        <script type="text/javascript" src="app/libs/af.js"></script>
+        <script type="text/javascript" src="app/libs/af.ui.js"></script>-->
+        
+        <!-- PRODUCTION -->
+        <script type="text/javascript" src="app/libs/af.ui.min.js"></script>
+        <script type="text/javascript" src="app/libs/af.mvc.js"></script>
+        <script type="text/javascript" src="app/app.js"></script>
+        <script type="text/javascript" src="app/utils.js"></script>
+        <script type="text/javascript" src="app/storage.js"></script>
+
+        <script>
+            $.ui.autoLaunch = false;
+            $.ui.useOSThemes = false;
+            $.feat.nativeTouchScroll = false;
+            $.ui.blockPageScroll();
+            $.ui.showBackbutton = false;
+            $(document).ready(function () {
+                if ($.ui.useOSThemes && !$.os.ios && $("#afui").get(0).className !== "ios")
+                    $("#afui").removeClass("ios");
+            });
+        </script>
+        
+        <!-- CSS -->
+        <link href="css/af.icons.css" rel="stylesheet" type="text/css"/>
+        <link href="css/af.ui.css" rel="stylesheet" type="text/css"/>
+        <link href="css/app-style.css" rel="stylesheet" type="text/css"/>
+
+    </head>
+    <body>
+        <div id="afui" class='af'>
+            
+            <!-- Splashscreen -->
+            <div id="splashscreen" class='ui-loader'>
+                <span class='ui-icon ui-icon-loading spin'></span><h1 >Starting app</h1>
+            </div>
+            
+            <!-- Default Header -->
+            <div id="header"></div>
+            
+            <div id="content" style="">
+	            
+                <!-- Panels -->
+                <div class="panel" id="home_page" title="Title" data-header="default">
+                    <div class="content">
+                        
+                    </div>
+                    
+                </div>
+                <!-- /Panels -->
+
+            </div>
+            
+            <!-- Default Navigation Menus -->
+            <div id="navbar"></div>
+          
+            <!-- Custom Headers -->
+            <header id="default">
+                <h1 id="pageTitle">
+                    TeroMarine
+                </h1>
+            </header>
+            <!-- /Custom Headers -->
+
+        </div>
+    </body>
+</html>
